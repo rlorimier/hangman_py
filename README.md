@@ -20,7 +20,7 @@ You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 - ![errormsg](images/image6.png)
 - The word to be guessed is shown as dashes so the user knows how many letters the word contains.
 - At the end of the game, the user is asked if he wants to play again. If 'Y' is typed the game restarts. If 'N' is typed a goodbye message apears and the game finishes.
-  ![gameover](images/image4.png)
+- ![gameover](images/image4.png)
 
 ## Technologies used
 - [Python](https://www.python.org/)
