@@ -1,31 +1,65 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# HANGMAN
+For my Milestone Project #3 on Code Institute's Diploma in Software Developement course I have created a Hangman Python game.
+The game selects a random word from a list with 55 animal names and starts showing an empty hangman and blank spaces corresponding with each letter in the word that needs to be guessed. 
+The game finishes when all the letters are guessed correctly or if the hangman is completed, leaving the user out of moves to play.
 
-Welcome USER_NAME,
+You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+![hangman](images/image3.png)
 
-## Reminders
+## Features
+### Existing features
+- Created in Python using Visual studio Code.
+- Deployed in Heroku for online interaction.
+- Hangman is build as user makes wrong guesses.
+- Console tells user if the guessed letter is right or wrong.
+- List of all guessed letters is shown. 
+- ![wordslist](images/image5.png)
+- If the user types something else than a letter, console shows an error message.
+- If the user types the same letter again, console shows an error message.
+- ![errormsg](images/image6.png)
+- The word to be guessed is shown as dashes so the user knows how many letters the word contains.
+- At the end of the game, the user is asked if he wants to play again. If 'Y' is typed the game restarts. If 'N' is typed a goodbye message apears and the game finishes.
+  ![gameover](images/image4.png)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Technologies used
+- [Python](https://www.python.org/)
+- [Visual Studio Code](https://code.visualstudio.com/) as IDE
+- [Git](https://git-scm.com/) for version control
+- [GitHub](https://github.com/) to storage files 
+- [Heroku](https://www.heroku.com/home) for deployment
+## Resources
+- [Code Institute](https://codeinstitute.net/) course materials and Slack community
+- [Curso em Video](https://www.cursoemvideo.com/)
 
-## Creating the Heroku app
+## Credits
+### Content
+- List of words contains only animals chosen randomly.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Testing
+The game works with no bugs via Heroku app.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+#### ISSUE
+*You may notice that this repository only contain a few commits. This was not intentional and happened just because the code was initially written in another repository. You can check it by clicking [HERE](https://github.com/rlorimier/hangman). When deploying the initial project on Heroku it was always returning failure messages.* 
+![Failure](images/image.png)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+*When contact CI Student Support I was told that was necessary to use the CI template due to important files to be added in order to make the deployment works. That said, a new repository was created. The previous code was copied and past on the new file and the deployment ran with no failure.*
+![Deployed](images/image2.png)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## Creating a Repository and Deploying
+- The steps to create a new repository:
+  1) Logged in my GitHub page and accessed Code Institute GitHub page.
+  2) Selected python-essencials-template and clicked in Use This Template.
+  3) Created a new repository from the one mentioned above.
+  4) On my GitHub Desktop, selected Add and then Clone a repository.
+  5) On my Visual Studio Code (VSC), selected Open Folder and then selected the new created folder to start coding.
 
-Connect your GitHub repository and deploy as normal.
+- The steps to commit and push commits:
+  1) Every alteration on the files was being saved automatically.
+  2) GitHub Desktop is connected with VSC and showns every changes made on the files.
+  3) After every significant amount of coding is time for local commits:
+     - On GitHub Desktop, type in a name for the commit and click Commit to Main.
+  4) After a work day, the last local commit is done and then click in Push Origim to commit all local commits to GitHub repository.
 
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+- To Deploy:
+  1) 
