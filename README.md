@@ -29,8 +29,9 @@ You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 - [GitHub](https://github.com/) to storage files 
 - [Heroku](https://www.heroku.com/home) for deployment
 ## Resources
-- [Code Institute](https://codeinstitute.net/) course materials and Slack community
-- [Curso em Video](https://www.cursoemvideo.com/)
+- [Code Institute](https://codeinstitute.net/) - course materials, Slack community and tutor support
+- [Curso em Video](https://www.youtube.com/playlist?list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0) - youtube programming channel
+- [Invent with Python](https://inventwithpython.com/invent4thed/chapter8.html) - for inspiration
 
 ## Credits
 ### Content
@@ -62,4 +63,11 @@ The game works with no bugs via Heroku app.
   4) After a work day, the last local commit is done and then click in Push Origim to commit all local commits to GitHub repository.
 
 - To Deploy:
-  1) 
+  1) Logged in Heroku page and clicked New > Create New App.
+  2) Selected app name and region.
+  3) On Settings:
+        - Created a Config Var called PORT and setted to 8000.
+        - Added Python and NodeJS buildpacks.
+  4) On Deploy:
+        - Conected to my GitHub and searched a repository to conect with.
+        - Clicked Deploy Branch 
