@@ -8,7 +8,7 @@ You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 ![hangman](images/image3.png)
 
 ## Features
-### Existing features
+### Code features
 - Created in Python using Visual studio Code.
 - Deployed in Heroku for online interaction.
 - Use of random library to select a ramdom word from a list.
@@ -32,6 +32,7 @@ You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 - [Git](https://git-scm.com/) for version control
 - [GitHub](https://github.com/) to storage files 
 - [Heroku](https://www.heroku.com/home) for deployment
+- [PEP8](http://pep8online.com/) for code validation
 ## Resources
 - [Code Institute](https://codeinstitute.net/) - course materials, Slack community and tutor support
 - [Curso em Video](https://www.youtube.com/playlist?list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0) - youtube programming channel
