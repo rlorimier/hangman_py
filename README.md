@@ -11,6 +11,10 @@ You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 ### Existing features
 - Created in Python using Visual studio Code.
 - Deployed in Heroku for online interaction.
+- Use of random library to select a ramdom word from a list.
+- Lines commented for an easy and clear code understanding.
+
+### User features
 - Hangman is build as user makes wrong guesses.
 - Console tells user if the guessed letter is right or wrong.
 - List of all guessed letters is shown. 
