@@ -1,5 +1,6 @@
 import random
 
+
 # list with hangmans
 def hangman(moves_left):
     hangmans = ['''
@@ -93,10 +94,10 @@ def run_game(word):
                 # to convert word_completion from a string to a list
                 list_letters = list(word_completion)
                 # list comprehension
-                indices = [i for i, letter in enumerate(word) if letter == guess]
-                for index in indices:
+                index = [i for i, letter in enumerate(word) if letter == guess]
+                for indice in index:
                     # replace the space for the guessed letter
-                    list_letters[index] = guess
+                    list_letters[indice] = guess
                 # to convert word_completion back to a string
                 word_completion = "".join(list_letters)
                 # no more spaces means all letters were guessed correctly
