@@ -88,7 +88,6 @@ def run_game(word):
         print(hangman(moves_left)) # prints the hangman corresponding with the moves_left
         print(word_completion + "\n") # prints the spaces and/or corresponding guessed letters
         print(str(guessed_letters)[1:-1] + "\n") # prints the list with all the guessed letters
-    counter += 1
 
     # end of the game
     if guessed: # guessed=true
@@ -96,9 +95,12 @@ def run_game(word):
         print("\033[96mCongratulations! You guessed the word!\033[m")
     else: # moves_left=0
         print(f"\033[91mYou ran out of tries. The word was {word}.\nGame Over!\033[m")
+    counter += 1
     print(f"You played {counter} times and have {times_win} victories!")
 
-def keep_playing(run_game):
+
+
+def keep_playing():
     play_again = input("Do you want to play again? [Y/N] ").upper()
     while play_again != "Y" and play_again != "N":
         print("Not a valid option. Please try again.")
@@ -114,7 +116,7 @@ def keep_playing(run_game):
 def main():
     word = get_word() # function to pick the random word
     run_game(word) # function that contains the game
-    keep_playing(run_game)
+    keep_playing()
 
 
 main()
