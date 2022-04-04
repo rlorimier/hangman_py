@@ -119,7 +119,8 @@ def run_game(word):
         print("\033[96mCongratulations! You guessed the word!\033[m")
     # moves_left=0
     else:
-        print(f"\033[91mYou ran out of tries. The word was {word}.\nGame Over!\033[m")
+        print(f"\033[91mYou ran out of tries. The word was {word}.\033[m")
+        print("\033[91mGame Over!\033[m")
     counter += 1
     print(f"You played {counter} times and have {times_win} victories!")
 
