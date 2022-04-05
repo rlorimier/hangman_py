@@ -118,6 +118,7 @@ def run_game(word):
     # end of the game
     # guessed=true
     if guessed:
+        # add 1 to the variable every time player guess the word correctly
         global times_win
         times_win += 1
         print("\033[96mCongratulations! You guessed the word!\033[m")
@@ -125,21 +126,29 @@ def run_game(word):
     else:
         print(f"\033[91mYou ran out of tries. The word was {word}.\033[m")
         print("\033[91mGame Over!\033[m")
+    # add 1 to the variable every time the game is played
     global counter
     counter += 1
     print(f"You played {counter} times and have {times_win} victories!")
 
 
+# to restart the game
 def keep_playing():
+    # variable set to start the loop
     play_again = True
+    # to keep the game playing
     while play_again:
+        # user should enter Y or N as answer
         restart = input("Do you want to play again? [Y/N] ").upper()
+        # user enters Y and the game restarts
         if restart == "Y":
             word = get_word()
             run_game(word)
+        # user enter an invalid answer
         elif restart != "N" and restart != "Y":
             print("Not a valid option. Please try again.")
             restart = input("Do you want to play again? [Y/N] ").upper()
+        # user enters N and the loop stops
         else:
             play_again = False
     print("See you next time")
