@@ -131,15 +131,18 @@ def run_game(word):
 
 
 def keep_playing():
-    play_again = input("Do you want to play again? [Y/N] ").upper()
-    while play_again != "Y" and play_again != "N":
-        print("Not a valid option. Please try again.")
-        play_again = input("Do you want to play again? [Y/N] ").upper()
-    if play_again == "Y":
-        word = get_word()
-        run_game(word)
-    else:
-        print("See you next time")
+    play_again = True
+    while play_again:
+        restart = input("Do you want to play again? [Y/N] ").upper()
+        if restart == "Y":
+            word = get_word()
+            run_game(word)
+        elif restart != "N" and restart != "Y":
+            print("Not a valid option. Please try again.")
+            restart = input("Do you want to play again? [Y/N] ").upper()
+        else:
+            play_again = False
+    print("See you next time")
 
 
 # main function to run the game
@@ -148,6 +151,7 @@ def main():
     word = get_word()
     # function that contains the game
     run_game(word)
+    # function to restart the game
     keep_playing()
 
 
