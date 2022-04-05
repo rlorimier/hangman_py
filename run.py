@@ -147,7 +147,7 @@ def keep_playing():
         # user enter an invalid answer
         elif restart != "N" and restart != "Y":
             print("Not a valid option. Please try again.")
-            restart = input("Do you want to play again? [Y/N] ").upper()
+            continue
         # user enters N and the loop stops
         else:
             play_again = False
