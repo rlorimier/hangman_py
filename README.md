@@ -11,7 +11,7 @@ You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 ### Code features
 - Created in Python using Visual studio Code.
 - Deployed in Heroku for online interaction.
-- Use of random library to select a ramdom word from a list.
+- Use of random library to select a random word from a list.
 - Lines commented for an easy and clear code understanding.
 
 ### User features
@@ -43,7 +43,17 @@ You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 - List of words contains only animals chosen randomly.
 
 ## Testing
-The game works with no bugs via Heroku app.
+Code passed with no errors on PEP8 Validator.
+You can check it by clicking [HERE](http://pep8online.com/checkresult).
+
+![PEP8](images/image7.png)
+
+### Fixed Bugs
+- Variables counter and times_win - when declared inside the function both were adding 1 only two times and then stopping the counting. I declared them outside the function and used them as global variables within the function and it makes them work properly, adding one at every victory and every time the game was played.
+  
+- Function keep_playing() - The input was initially with the 'while', with no variables declared to store it. The answer Y would restart the game, however any other letter typed would end it. I created the variable play_again and the if/else statements within the while loop so whatever the user types has a reaction.
+
+- Line 150 - I add the input to ask the user Y/N (same as the one on line 142). By doing this, whenever the answer was Y the loop restarted and the question was repeted. The use of 'continue' avoided the duplicated questioning and restarted the game straight away.
 
 #### ISSUE
 *You may notice that this repository only contain a few commits. This was not intentional and happened just because the code was initially written in another repository. You can check it by clicking [HERE](https://github.com/rlorimier/hangman). When deploying the initial project on Heroku it was always returning failure messages.* 
