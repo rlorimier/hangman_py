@@ -1,5 +1,8 @@
 import random
 
+# to keep track of times played and victories
+counter = times_win = 0
+
 
 # list with hangmans
 def hangman(moves_left):
@@ -64,7 +67,6 @@ def run_game(word):
     guessed_letters = []
     # number of tries, same number of hangmans
     moves_left = 6
-    counter = times_win = 0
     print("\033[92m H A N G M A N \033[m")
     # prints the hangman
     print(hangman(moves_left))
@@ -116,12 +118,14 @@ def run_game(word):
     # end of the game
     # guessed=true
     if guessed:
+        global times_win
         times_win += 1
         print("\033[96mCongratulations! You guessed the word!\033[m")
     # moves_left=0
     else:
         print(f"\033[91mYou ran out of tries. The word was {word}.\033[m")
         print("\033[91mGame Over!\033[m")
+    global counter
     counter += 1
     print(f"You played {counter} times and have {times_win} victories!")
 
