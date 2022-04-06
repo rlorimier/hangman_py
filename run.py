@@ -47,7 +47,7 @@ def hangman(moves_left):
 
 # selecting a random word from a list
 def get_word():
-    words_list = "squirrel bear whale coyote hedgehog lioncrocodile  elephant\
+    words_list = "squirrel bear whale coyote hedgehog lion crocodile  elephant\
     hyena monkey panda deer leopard kangaroo tiger zebra giraffe hippo wolf \
     gorilla snake eagle antelope vulture panther parrot rhino shark reindeer \
     lizard leopard koala frog turtle toucan spider sparrow scorpion iguana \
@@ -163,5 +163,9 @@ def main():
     # function to restart the game
     keep_playing()
 
-
+print("\033[7m Welcome to H A N G M A N \033[m \n")
+print("** Game Rules **")
+print("- All words to be guessed are animal names")
+print("- Type only one letter at the time, even if you already know the word")
+print("- You can have 6 wrong guesses\n")
 main()
