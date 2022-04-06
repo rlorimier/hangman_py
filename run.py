@@ -67,7 +67,7 @@ def run_game(word):
     guessed_letters = []
     # number of tries, same number of hangmans
     moves_left = 6
-    print("\033[92m H A N G M A N \033[m")
+    print("\033[92m \nH A N G M A N \033[m")
     # prints the hangman
     print(hangman(moves_left))
     # prints the spaces
@@ -129,7 +129,15 @@ def run_game(word):
     # add 1 to the variable every time the game is played
     global counter
     counter += 1
-    print(f"You played {counter} times and have {times_win} victories!")
+    if counter == 1:
+        if times_win == 1:
+            print(f"You played {counter} time and have {times_win} victory!")
+        else:
+            print(f"You played {counter} time and have {times_win} victories!")
+    elif counter > 1 and times_win == 1:
+        print(f"You played {counter} times and have {times_win} victory!")
+    else:
+        print(f"You played {counter} times and have {times_win} victories!")
 
 
 # to restart the game
@@ -139,7 +147,7 @@ def keep_playing():
     # to keep the game playing
     while play_again:
         # user should enter Y or N as answer
-        restart = input("Do you want to play again? [Y/N] ").upper()
+        restart = input("\nDo you want to play again? [Y/N] ").upper()
         # user enters Y and the game restarts
         if restart == "Y":
             word = get_word()
@@ -167,5 +175,5 @@ print("\033[7m Welcome to H A N G M A N \033[m \n")
 print("** Game Rules **")
 print("- All words to be guessed are animal names")
 print("- Type only one letter at the time, even if you already know the word")
-print("- You can have 6 wrong guesses\n")
+print("- You can have 6 wrong guesses")
 main()
