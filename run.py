@@ -1,4 +1,5 @@
 import random
+from time import sleep
 
 # to keep track of times played and victories
 counter = times_win = 0
@@ -124,8 +125,8 @@ def run_game(word):
         print("\033[96mCongratulations! You guessed the word!\033[m")
     # moves_left=0
     else:
-        print(f"\033[91mYou ran out of tries. The word was {word}.\033[m")
-        print("\033[91mGame Over!\033[m")
+        print(f"\033[33mYou ran out of tries. The word was {word}.\033[m")
+        #print("\033[91mGame Over!\033[m")
     # add 1 to the variable every time the game is played
     global counter
     counter += 1
@@ -159,7 +160,8 @@ def keep_playing():
         # user enters N and the loop stops
         else:
             play_again = False
-    print("See you next time")
+    print("\033[91mGame Over!")
+    print("See you next time\33[m")
 
 
 # main function to run the game
@@ -171,9 +173,18 @@ def main():
     # function to restart the game
     keep_playing()
 
-print("\033[7m Welcome to H A N G M A N \033[m \n")
-print("** Game Rules **")
-print("- All words to be guessed are animal names")
-print("- Type only one letter at the time, even if you already know the word")
-print("- You can have 6 wrong guesses")
+def before_start():
+    print("\033[7m Welcome to H A N G M A N \033[m \n")
+    sleep(1)
+    print("\033[34m** Game Rules **\033[m")
+    print("- All words to be guessed are animal names")
+    print("- Type only one letter at the time, even if you already know the word")
+    print("- You can have 6 wrong guesses")
+    sleep(3)
+    print("\nLet's start", end=" ")
+    for x in range(3):
+        print(".", end=" ")
+        sleep(2)
+
+before_start()
 main()
