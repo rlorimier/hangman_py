@@ -47,7 +47,7 @@ You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 
 ## Testing
 Code passed with no errors on PEP8 Validator.
-You can check it by clicking [HERE](http://pep8online.com/checkresult).
+You can check it by clicking [HERE](http://pep8online.com/).
 
 ![PEP8](images/image7.png)
 
