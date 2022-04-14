@@ -70,7 +70,7 @@ def before_start():
     print("\nLet's start", end=" ")
     for x in range(3):
         print(".", end=" ")
-        sleep(2)
+        sleep(0.5)
     print("\n")
 
 
