@@ -12,9 +12,11 @@ You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 - Created in Python using Visual studio Code.
 - Deployed in Heroku for online interaction.
 - Use of random library to select a random word from a list.
+- Use of time library to add a short delay at the beginning of the game to present the game rules.
 - Lines commented for an easy and clear code understanding.
 
 ### User features
+- Before the game starts, user is presented with the game rules.
 - Hangman is build as user makes wrong guesses.
 - Console tells user if the guessed letter is right or wrong.
 - List of all guessed letters is shown. 
@@ -37,6 +39,7 @@ You can check the game clicking [HERE](https://ren-hangman.herokuapp.com/)
 - [Code Institute](https://codeinstitute.net/) - course materials, Slack community and tutor support
 - [Curso em Video](https://www.youtube.com/playlist?list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0) - youtube programming channel
 - [Invent with Python](https://inventwithpython.com/invent4thed/chapter8.html) - for inspiration
+- [W3 Schools](https://www.w3schools.com/python/default.asp) - for material support
 
 ## Credits
 ### Content
