@@ -58,6 +58,22 @@ def get_word():
     return word
 
 
+# the welcome screen, only shown before the first game starts
+def before_start():
+    print("\033[7m Welcome to H A N G M A N \033[m \n")
+    sleep(1)
+    print("\033[34m** Game Rules **\033[m")
+    print("- All words to be guessed are animal names")
+    print("- Type one letter at the time, even if you already know the word")
+    print("- You can have 6 wrong guesses")
+    sleep(3)
+    print("\nLet's start", end=" ")
+    for x in range(3):
+        print(".", end=" ")
+        sleep(2)
+    print("\n")
+
+
 # setting the game
 def run_game(word):
     # to create the _ on the game based on the random word from the list
@@ -126,7 +142,6 @@ def run_game(word):
     # moves_left=0
     else:
         print(f"\033[33mYou ran out of tries. The word was {word}.\033[m")
-        #print("\033[91mGame Over!\033[m")
     # add 1 to the variable every time the game is played
     global counter
     counter += 1
@@ -164,7 +179,7 @@ def keep_playing():
     print("See you next time\33[m")
 
 
-# main function to run the game
+# main function to run the game only without instructions
 def main():
     # function to pick the random word
     word = get_word()
@@ -173,18 +188,6 @@ def main():
     # function to restart the game
     keep_playing()
 
-def before_start():
-    print("\033[7m Welcome to H A N G M A N \033[m \n")
-    sleep(1)
-    print("\033[34m** Game Rules **\033[m")
-    print("- All words to be guessed are animal names")
-    print("- Type only one letter at the time, even if you already know the word")
-    print("- You can have 6 wrong guesses")
-    sleep(3)
-    print("\nLet's start", end=" ")
-    for x in range(3):
-        print(".", end=" ")
-        sleep(2)
 
 before_start()
 main()
